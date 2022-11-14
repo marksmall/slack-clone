@@ -1,0 +1,22 @@
+{
+  "recommendations": [
+    "4ops.terraform",
+    "aaron-bond.better-comments",
+    "bradlc.vscode-tailwindcss",
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "esbenp.prettier-vscode",
+    "formulahendry.auto-complete-tag",
+    "ms-azuretools.vscode-docker",
+    "MS-vsliveshare.vsliveshare-pack",
+    "ms-python.python",
+    "naumovs.color-highlight",
+    "Shan.code-settings-sync",
+    "SimonSiefke.svg-preview",
+    "TabNine.tabnine-vscode",
+    "VisualStudioExptTeam.vscodeintellicode",
+    "wayou.vscode-todo-highlight",
+    "xabikos.ReactSnippets",
+    "yzhang.markdown-all-in-one",
+  ]
+}

@@ -21,6 +21,6 @@
       "~/*": ["./src/*"]
     }
   },
-  "exclude": ["./src/{stories,mocks}/**/*.ts", "./src/{stories,mocks}/**/*.tsx", "./cypress/*"],
+  "exclude": ["./node_modules", "./src/{stories,mocks}/**/*.ts", "./src/{stories,mocks}/**/*.tsx", "./cypress/*"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

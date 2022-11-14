@@ -1,7 +1,9 @@
 import React, { FC, ReactElement } from 'react';
 
-import { Button } from '@astrosat/react-utils';
+import { ErrorBoundary } from 'react-error-boundary';
+import { Outlet } from 'react-router-dom';
 
+import { ErrorFallback, errorHandler } from '~/components/error-fallback.component';
 import Footer from '~/layout/footer.component';
 import Header from '~/layout/header.component';
 
@@ -10,11 +12,14 @@ const App: FC = (): ReactElement => (
     <Header />
 
     <main className="grow">
-      <h2>Main Content</h2>
-
-      <Button onClick={() => console.log('BUTTON CLICKED')}>
-        <span>Click Me</span>
-      </Button>
+      <ErrorBoundary
+        FallbackComponent={ErrorFallback}
+        onError={errorHandler}
+        onReset={() => console.log('Resetting after error')}
+      >
+        <div>App content</div>
+        <Outlet />
+      </ErrorBoundary>
     </main>
 
     <Footer />

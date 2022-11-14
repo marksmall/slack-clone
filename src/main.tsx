@@ -2,17 +2,39 @@ import React from 'react';
 
 import axe from '@axe-core/react';
 import ReactDOM from 'react-dom/client';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 import App from './app.component';
+import Chat from './chat/chat.component';
+import ErrorPage from './components/error-page.component';
+import Profile from './profile/profile.component';
 
 import './i18n/i18n';
 
 import './index.css';
 
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <App />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: 'chat',
+        element: <Chat />,
+      },
+      {
+        path: 'profile',
+        element: <Profile />,
+      },
+    ],
+  },
+]);
+
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>,
 );
 
